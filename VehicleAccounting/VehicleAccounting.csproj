@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D311A418-275D-45E8-9B26-623A98AD45A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VehicleAccounting</RootNamespace>
+    <AssemblyName>VehicleAccounting</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo_exe.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.38.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.38\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VehicleAccountingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VehicleAccountingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Водители.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Водители.designer.cs">
+      <DependentUpon>Водители.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Вход.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Вход.designer.cs">
+      <DependentUpon>Вход.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ДТП.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ДТП.designer.cs">
+      <DependentUpon>ДТП.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Запчасти.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Запчасти.designer.cs">
+      <DependentUpon>Запчасти.cs</DependentUpon>
+    </Compile>
+    <Compile Include="О_программе.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="О_программе.designer.cs">
+      <DependentUpon>О_программе.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Пользователи.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Пользователи.designer.cs">
+      <DependentUpon>Пользователи.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Регистрация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Регистрация.designer.cs">
+      <DependentUpon>Регистрация.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Техническое_обслуживание.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Техническое_обслуживание.designer.cs">
+      <DependentUpon>Техническое_обслуживание.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Транспортные_средства.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Транспортные_средства.designer.cs">
+      <DependentUpon>Транспортные_средства.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Водители.resx">
+      <DependentUpon>Водители.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Вход.resx">
+      <DependentUpon>Вход.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ДТП.resx">
+      <DependentUpon>ДТП.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Запчасти.resx">
+      <DependentUpon>Запчасти.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="О_программе.resx">
+      <DependentUpon>О_программе.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Пользователи.resx">
+      <DependentUpon>Пользователи.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Регистрация.resx">
+      <DependentUpon>Регистрация.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Техническое_обслуживание.resx">
+      <DependentUpon>Техническое_обслуживание.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Транспортные_средства.resx">
+      <DependentUpon>Транспортные_средства.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="VehicleAccountingDataSet.xsc">
+      <DependentUpon>VehicleAccountingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VehicleAccountingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VehicleAccountingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VehicleAccountingDataSet.xss">
+      <DependentUpon>VehicleAccountingDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disconnect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo_exe.ico" />
+    <None Include="Resources\car.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
